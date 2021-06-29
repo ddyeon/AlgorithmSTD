@@ -1,8 +1,8 @@
 #include <string>
 #include <vector>
-#include<map>
+#include<unordered_map>
 using namespace std;
-map<long long, long long> uno;
+unordered_map<long long, long long> uno;
 vector<long long> answer;
 
 long long find(int num) {
