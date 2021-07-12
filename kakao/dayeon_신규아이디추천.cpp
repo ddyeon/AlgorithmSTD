@@ -10,12 +10,12 @@ string solution(string new_id)
     string answer = "";
 
     string tmp = "";
-    //1´Ü°è ¼Ò¹®ÀÚ·Î Ä¡È¯
+    //1ë‹¨ê³„ ì†Œë¬¸ìë¡œ ì¹˜í™˜
     for(int i = 0; i < new_id.size(); i++)
         tmp += tolower(new_id[i]);
 
 
-    //2´Ü°è
+    //2ë‹¨ê³„
     string second = "";
     for (int i = 0; i < tmp.size(); i++)
     {
@@ -57,7 +57,7 @@ string solution(string new_id)
         }   
     }
     
-    //4´Ü°è
+    //4ë‹¨ê³„
     string four = "";
     if(third[0] == '.')
     {
@@ -78,11 +78,11 @@ string solution(string new_id)
     
     
 
-    //5´Ü°è
+    //5ë‹¨ê³„
     if(four.size() == 0)
         four = 'a';
 
-    //6´Ü°è
+    //6ë‹¨ê³„
     string six = "";
     if(four.size() >=16)
     {
@@ -92,7 +92,7 @@ string solution(string new_id)
             four = four.substr(0,14);
     }
 
-    //7´Ü°è
+    //7ë‹¨ê³„
     if(four.size() <=2)
     {
         char tt = four[four.size()-1];
@@ -111,8 +111,8 @@ string solution(string new_id)
     return answer;
 }
 
-int main()
-{
-    string s = "123_.def";
-    solution(s);
-}
+//int main()
+//{
+    ///string s = "123_.def";
+    //solution(s);
+//}
