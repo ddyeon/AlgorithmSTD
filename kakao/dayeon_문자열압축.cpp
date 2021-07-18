@@ -11,10 +11,10 @@ int solution(string s)
 
     for(int i = 1; i<=s.size()/2; i++)
     {
-        string munja, tmp; //ÇÒ¶§¸¶´Ù ÃÊ±âÈ­ ÇÊ¿ä
+        string munja, tmp; //í• ë•Œë§ˆë‹¤ ì´ˆê¸°í™” í•„ìš”
 
         int cnt = 1;
-        tmp = s.substr(0,i); //Ã£´Â¹®ÀÚÀúÀå.
+        tmp = s.substr(0,i); //ì°¾ëŠ”ë¬¸ìžì €ìž¥.
 
         for (int j = i; j < s.size(); j += i)
         {
@@ -26,7 +26,7 @@ int solution(string s)
                     munja+= to_string(cnt);
                 munja += tmp;
                 tmp = s.substr(j,i);
-                cnt+=1; //ÀúÀåÇÑÈÄ ´Ù½Ã ÃÊ±âÈ­
+                cnt+=1; //ì €ìž¥í•œí›„ ë‹¤ì‹œ ì´ˆê¸°í™”
             }
         }
         if (cnt > 1)
@@ -50,5 +50,5 @@ int main()
     //"abcabcabcabcdededededede" 14
     //"xababcdcdababcdcd"
     string s = "aabbaccc";
-    solution(s);
+    //solution(s);
 }
