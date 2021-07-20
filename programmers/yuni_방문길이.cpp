@@ -3,8 +3,8 @@
 #include <unordered_map>
 using namespace std;
 
-//U : À§ÂÊÀ¸·Î ÇÑÄ­ °¡±â, D : ¾Æ·¡ÂÊÀ¸·Î ÇÑ Ä­ °¡±â
-//R : ¿À¸¥ÂÊÀ¸·Î ÇÑ Ä­ °¡±â, L : ¿ÞÂÊÀ¸·Î ÇÑ Ä­ °¡±â
+//U : ìœ„ìª½ìœ¼ë¡œ í•œì¹¸ ê°€ê¸°, D : ì•„ëž˜ìª½ìœ¼ë¡œ í•œ ì¹¸ ê°€ê¸°
+//R : ì˜¤ë¥¸ìª½ìœ¼ë¡œ í•œ ì¹¸ ê°€ê¸°, L : ì™¼ìª½ìœ¼ë¡œ í•œ ì¹¸ ê°€ê¸°
 struct Node {
     int a, b, c, d;
 };
@@ -18,15 +18,36 @@ int solution(string dirs) {
     for (int i = 0; i <size; i++) {
         tmpy = y;
         tmpx = x;
-        if (dirs[i] == 'U') y++;
-        else if (dirs[i] == 'L')x--;
-        else if (dirs[i] == 'R')x++;
-        else if (dirs[i] == 'D') y--;
+        if (dirs[i] == 'U') {
+            if (y == 5) continue;
+            y++;
+            
+        }
+        else if (dirs[i] == 'L'){
+            if (x == -5)continue;
+            x--;
+        }
+        else if (dirs[i] == 'R') {
+            if (x == 5)continue;
+            x++;
+        }
+        else if (dirs[i] == 'D') {
+            if (y == -5)continue;
+            y--;
+        }
+        string tmp2 = to_string(y);
+        tmp2 += to_string(x);
+        tmp2 += to_string(tmpy);
+        tmp2 += to_string(tmpx);
+
         string tmp = to_string(tmpy);
         tmp += to_string(tmpx);
         tmp += to_string(y);
         tmp += to_string(x);
+
         uno[tmp]++;
+        uno[tmp2]++;
+
         if (uno[tmp] == 1) {
             uno[tmp] = 1;
             answer++;
