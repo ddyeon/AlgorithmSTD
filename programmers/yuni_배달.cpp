@@ -8,7 +8,7 @@ vector<pair<int, int>> v[52];
 int dist[100];
 
 void dijkstra(int N) {
-    pq.push({ 0,1 }); // ¾ÕÀÌ °Å¸®, µÚ°¡ ÇöÀç À§Ä¡
+    pq.push({ 0,1 }); // Â¾Ã•Ã€ÃŒ Â°Ã…Â¸Â®, ÂµÃšÂ°Â¡ Ã‡Ã¶Ã€Ã§ Ã€Â§Ã„Â¡
     dist[1] = 0;
 
     while (!pq.empty()) {
@@ -33,7 +33,7 @@ int solution(int N, vector<vector<int> > road, int K) {
     for (int i = 1; i <= N; i++)dist[i] = 500001;
     for (int i = 0; i < road.size(); i++) {
         v[road[i][0]].push_back({ road[i][1], road[i][2] });
-        v[road[i][1]].push_back({ road[i][1], road[i][2] });
+        v[road[i][1]].push_back({ road[i][0], road[i][2] });
     }
     dijkstra(N);
     for (int i = 1; i < N; i++) {
