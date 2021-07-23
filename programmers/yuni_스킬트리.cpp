@@ -15,9 +15,9 @@ int solution(string skill, vector<string> skill_trees) {
         for (int j = 0; j < skill_trees[i].size(); j++) {
             tmp.insert({ skill_trees[i][j] , j + 1 });
             if (skillmap.count(skill_trees[i][j]) != 0 && skill_trees[i][j] != skill[0]) {
-                for (auto m = skillmap.begin(); m != skillmap.end(); ++m) {
-                    if (m->first == skill_trees[i][j]) break;
-                    if (tmp.count(m->first) == 0) {
+                for (int k = 0; k < skillmap[skill_trees[i][j]]; k++) {
+                    
+                    if (tmp[skill[k]] == 0) {
                         flag = false;
                         break;
                     }
