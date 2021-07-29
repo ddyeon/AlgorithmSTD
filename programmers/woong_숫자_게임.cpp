@@ -14,15 +14,15 @@ int solution(vector<int> A, vector<int> B)
 	sort(B.begin(), B.end());
 
 	for (int i = 0; i < A.size(); i++) {
-        if (i + diff >= B.size()) {
-            break;
-        }
+        	if (i + diff >= B.size()) {
+            		break;
+        	}
 		if (A[i] < B[i + diff]) {
 			answer++;
-            continue;
+            		continue;
 		}
-        diff++;
-        i--;
+        	diff++;
+        	i--;
 	}
 
 	return answer;
