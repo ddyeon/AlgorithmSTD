@@ -5,11 +5,6 @@
 
 using namespace std;
 
-bool comp(int a, int b)
-{
-    return a > b;
-}
-
 int solution(int n, vector<vector<int>> edge)
 {
     int answer = 0;
@@ -37,7 +32,7 @@ int solution(int n, vector<vector<int>> edge)
 
         for(int i = 0; i< v[current].size(); i++)
         {
-            int last = v[current][i]; //³ëµå¿Í ¿¬°áµÈ °Íµé
+            int last = v[current][i]; //Â³Ã«ÂµÃ¥Â¿Ã Â¿Â¬Â°Ã¡ÂµÃˆ Â°ÃÂµÃ©
             if(!visit[last])
             {
                 visit[last] = true;
@@ -48,8 +43,8 @@ int solution(int n, vector<vector<int>> edge)
         }
     }
 
-    sort(distance.begin(), distance.end(), comp);
-
+    sort(distance.begin(), distance.end());
+    reverse(distance.begin(), distance.end());
 
     for(int i = 0; i <distance.size(); i++)
     {
