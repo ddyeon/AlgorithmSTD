@@ -1,4 +1,6 @@
 #include <string>
+#include <string.h>
+#include <algorithm>
 #include <vector>
 #include <iostream>
 using namespace std;
@@ -13,7 +15,7 @@ string toBinary(int n, int num) {
             Binary += '0';
         num = num / 2;
     }
-    while(Binary.size() < n)
+    while (Binary.size() < n)
         Binary += '0';
     reverse(Binary.begin(), Binary.end());
     return Binary;
@@ -36,4 +38,3 @@ vector<string> solution(int n, vector<int> arr1, vector<int> arr2) {
     }
     return answer;
 }
-
