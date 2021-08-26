@@ -1,0 +1,46 @@
+#include <string>
+#include <vector>
+#include <algorithm>
+
+using namespace std;
+
+//진법n, t answer 길이, 게임에 참가하는 인원 m, 튜브의 순서 p
+
+string converter(int num, int jinsu) {
+    string nm = "";
+    if (num == 0)return "0";
+    while (num > 0) {
+        if (num % jinsu < 10) {
+            nm += (num % jinsu + 48);
+        }
+        else {
+            nm += (num % jinsu + 55);
+        }
+        num /= jinsu;
+    }
+    return nm;
+}
+string solution(int n, int t, int m, int p) {
+    string answer = "";
+    int cnt = 1;
+    int number = 0;
+    while (t>0) {
+        string a = converter(number, n);
+        for (int i = a.size()-1; i >= 0; i--) {
+            if (t == 0)break;
+            if (cnt == m + 1) cnt = 1;
+            if (cnt == p) {
+                answer += a[i];
+                t--;
+            }
+            cnt++;
+        }
+        number++;
+    }
+    return answer;
+}
+int main(void) {
+    solution(2, 4, 2, 1);
+    solution(19, 19, 2, 1);
+    solution(16, 16, 2, 1);
+}
