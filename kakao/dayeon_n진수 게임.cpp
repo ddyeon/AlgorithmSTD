@@ -4,7 +4,6 @@
 #include <iostream>
 
 using namespace std;
-//진법, 구할개수, 인원, 튜브순서
 
 string cal(int cur, int n)
 {
