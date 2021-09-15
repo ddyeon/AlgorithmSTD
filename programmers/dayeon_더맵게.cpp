@@ -4,7 +4,7 @@
 #include <algorithm>
 using namespace std;
 
-//¤¡¤¿Àå¸ÊÁö ¾ÊÀº À½½ÄÀÇ ½ºÄÚÇÊ Áö¼ö + µÎ¹øÂ°·Î ¸ÊÁö ¾ÊÀº À½½ÄÀÇ ½ºÄÚÇÊ*2
+//ê°€ìž¥ë§µì§€ ì•Šì€ ìŒì‹ì˜ ìŠ¤ì½”í•„ ì§€ìˆ˜ + ë‘ë²ˆì§¸ë¡œ ë§µì§€ ì•Šì€ ìŒì‹ì˜ ìŠ¤ì½”í•„*2
 int solution(vector<int> scoville, int K)
 {
     int answer = 0;
