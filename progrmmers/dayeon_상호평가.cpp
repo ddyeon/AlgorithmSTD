@@ -2,7 +2,7 @@
 #include <vector>
 #include <iostream>
 using namespace std;
-//¿Ö 11¹ø¸¸ Åë°ú¸¦ ¸øÇÏ´ÂÁö ¸ğ¸£°Ú´Ù..
+//ì™œ 11ë²ˆë§Œ í†µê³¼ë¥¼ ëª»í•˜ëŠ”ì§€ ëª¨ë¥´ê² ë‹¤..
 char checkScore(double sc)
 {
     if(sc >= 90)
@@ -16,7 +16,7 @@ char checkScore(double sc)
     else
         return 'F';
 }
-//Æò±Õ±¸ÇÏ±â
+//í‰ê· êµ¬í•˜ê¸°
 string solution(vector<vector<int>> scores) {
     string answer = "";
     
